@@ -2,7 +2,9 @@
 
 *Work in progress (it's only missing the paragraphs to describe each job)*
 
-[**Dowload the PDF**](./resume.pdf)
+[**Dowload the PDF**](https://github.com/colderis/resume/raw/master/resume.pdf)
+
+<img src="https://i.imgur.com/JnDyn38.jpg" alt="Preview of the resume" height="420" />
 
 ## Resources
 
