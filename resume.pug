@@ -1,0 +1,115 @@
+include mixins.pug
+
+link(rel="stylesheet" href="./resume.css")
+link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500,600,800|Lora:400i|Muli:400")
+link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css" integrity="sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA" crossorigin="anonymous")
+link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV" crossorigin="anonymous")
+
+.container
+  .w-two-third
+    header
+      h1 Romain Guilloteau
+      em.
+        Développeur full stack Ruby on Rails <br />et JavaScript (Node, React
+        & Vue)
+
+    .timeline
+      .mb-1
+        h2 Expérience
+        +timelineItem(
+          'Lead developer & Software architect',
+          'Codeur SARL',
+          'janvier 2015',
+          "aujourd'hui"
+        )
+          p.
+            Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor
+            sit amet,consectetur adipiscing elit.
+            <br />
+            Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec sed odio dui.
+            <br />
+            Cras mattis consectetur purus sit amet fermentum. Donec sed odio
+            dui.
+        +timelineItem(
+          'Lead developer',
+          '1Year1Book SARL',
+          'février 2013',
+          'septembre 2014'
+        )
+          p.
+            Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac.
+            <br />
+            Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+            faucibus mollis interdum.
+        +timelineItem('Freelance', null, 'juin 2012', 'février 2013')
+          p.
+            Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget
+            urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus,
+            nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+            Curabitur blandit tempus porttitor.
+      .mb-1
+        h2 Éducation
+        +timelineItem(
+          'Développeur Multimédia (Bac +3)',
+          "L'École Multimédia",
+          '2011',
+          '2014'
+        )
+        +timelineItem(
+          'Baccalauréat scientifique',
+          'Lycée Lamarck',
+          '2007',
+          '2010'
+        )
+
+    footer
+      p
+        | Vous pouvez consulter le code source de ce document : 
+        a(href="https://github.com/colderis/resume")
+          | github.com/colderis/resume
+
+  .w-one-third
+    .mugshot
+      img(src='images/mugshot.jpg')
+    .mb-1
+      h2 Contact
+      ul.icon-list
+        +iconListItem('place')
+          | Annecy, Rhône-Alpes, France
+        +iconListItem('phone_android')
+          a(href="tel:+33600000000") +33 6 00 00 00 00
+        +iconListItem('mail')
+          a(href="mailto:anon@romainguilloteau.com")
+            | anon@romainguilloteau.com
+        +iconListItem('skype', 'brand')
+          a(href="skype:anon?add") @Anon
+        +iconListItem('discord', 'brand')
+          | @Anon#1234
+    .mb-1
+      h2 Langues
+      ul.language-list
+        +languageListItem('fr', 'Français', 'Langue maternelle')
+        +languageListItem('uk', 'Anglais', 'Courant')
+    .mb-1
+      h2 Compétences
+      +skillList('Ruby on Rails', 'JavaScript', 'Node.js', 'React', 'Vue.js')
+      +skillList('PostgreSQL', 'MySQL', 'MongoDB', 'Redis')
+      +skillList('Stripe', 'Braintree', 'PayPal REST API')
+      +skillList('AWS', 'Firebase', 'Heroku', 'Capistrano')
+    div
+      h2 Liens
+      ul.icon-list
+        +iconListItem('link')
+          a(href="https://www.romainguilloteau.com/") romainguilloteau.com
+        +iconListItem('github', 'brand')
+          a(href="https://github.com/colderis") github.com/colderis
+        +iconListItem('gitlab', 'brand')
+          a(href="https://gitlab.com/ColdEris") gitlab.com/ColdEris
+        +iconListItem('linkedin', 'brand')
+          a(href="https://www.linkedin.com/in/romainguilloteau/")
+            | linkedin.com/in/romainguilloteau/

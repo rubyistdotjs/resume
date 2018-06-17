@@ -1,0 +1,35 @@
+mixin timelineItem(title, place, from, to)
+  .timeline-item
+    .timeline-item-heading
+      h3= title
+      em
+        | #{from} à #{to}
+        if place
+          |  - #{place}
+    if block
+      .timeline-item-body
+        block
+
+mixin skillList(...skills)
+  ul.skill-list
+    each skill in skills
+      li= skill
+
+mixin languageListItem(countryCode, language, level)
+  - imagePath = `./images/flag-${countryCode}.svg`;
+
+  li.language-list-item
+    .language-list-item-flag
+      img(src=imagePath)
+    = language
+    span= level
+
+mixin iconListItem(iconName, iconLibrary)
+  li.icon-list-item
+    if iconLibrary === 'brand'
+      - iconClass = `fab fa-${iconName} fa-fw`;
+      span(class=iconClass)
+    else
+      i(class="material-icons fa-fw")= iconName
+    block
+
