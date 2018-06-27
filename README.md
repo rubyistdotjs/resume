@@ -1,10 +1,8 @@
 # Resume / Curriculum vitæ
 
-*Work in progress (it's only missing the paragraphs to describe each job)*
+<img src="https://i.imgur.com/suODLPR.jpg" alt="Preview of the resume" height="420" />
 
-[**Download the pdf**](https://github.com/colderis/resume/raw/master/resume.pdf)
-
-<img src="https://i.imgur.com/JnDyn38.jpg" alt="Preview of the resume" height="420" />
+[**Download the PDF**](https://github.com/rubyistdotjs/resume/raw/master/resume.pdf)
 
 ## Resources
 
