@@ -1,0 +1,11 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "author": "Romain GUILLOTEAU (https://www.romainguilloteau.com/)",
+  "repository": "https://github.com/rubyistdotjs/resume",
+  "license": "ISC",
+  "scripts": {},
+  "dependencies": {
+    "relaxedjs": "^0.2.0"
+  }
+}
