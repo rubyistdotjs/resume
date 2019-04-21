@@ -5,6 +5,7 @@
   "repository": "https://github.com/rubyistdotjs/resume",
   "license": "ISC",
   "scripts": {
+    "build": "$(npm bin)/relaxed resume.pug --build-once",
     "watch": "$(npm bin)/relaxed resume.pug"
   },
   "dependencies": {
