@@ -9,6 +9,6 @@
     "watch": "$(npm bin)/relaxed resume.pug"
   },
   "dependencies": {
-    "relaxedjs": "^0.2.1"
+    "relaxedjs": "^0.2.2"
   }
 }
