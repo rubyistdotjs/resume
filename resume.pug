@@ -1,121 +1,102 @@
 include mixins.pug
 
 link(rel="stylesheet" href="./resume.css")
-link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
-link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500,600,800|Lora:400i|Muli:400")
-link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css" integrity="sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA" crossorigin="anonymous")
-link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV" crossorigin="anonymous")
+link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Public+Sans:400,500,600,700,800,900&display=swap")
+script(src="https://unpkg.com/feather-icons")
 
-.container
-  .w-two-third
-    header
-      h1 Romain Guilloteau
-      em.
-        Développeur Full Stack Senior Ruby on Rails et JavaScript (Node.js & React)
+.grid
+  .header-title.col-1
+    h1 Romain Guilloteau
+    span Senior Full Stack Developer
+  .header-mugshot.col-2
+    img(src='images/mugshot.jpg')
 
-    .timeline
-      .mb-1
-        h2 Expérience
-        +timelineItem(
-          'Développeur Full Stack',
-          'Lunchr',
-          'octobre 2018',
-          "aujourd'hui"
-        )
+  main.col-1
+    section
+      h2 Experience
+      +timelineItem(
+        'Software Engineer',
+        'Lunchr',
+        'Montpellier',
+        '2018'
+      )
+        p.
+          Within the Resto Inno Team, I was first responsible for big data
+          and making the relevant data available across different teams
+          (sales, support,...). I then became the tech lead of the
+          Affiliates Team and of all Node.js maters (preacher of functional
+          programming).
+      +timelineItem(
+        'Lead developer & Software architect',
+        'Codeur',
+        'Annecy',
+        '2015',
+        '2018'
+      )
+        p.
+          Starting from scratch, development and design of Facture.net,
+          Graphiste.com and several small marketing app.
+          <br />
+          Maintain and develop new features for the apps cited above and for
+          another existing app : Redacteur.com.
 
-        +timelineItem(
-          'Lead developer & Software architect',
-          'Codeur SARL',
-          'janvier 2015',
-          'octobre 2018'
-        )
-          p.
-            Conception, développement et design de Graphiste.com, Facture.net
-            et quelques mini-sites marketing.
-            <br />
-            Assurer la maintenance et le développement de nouvelles
-            fonctionnalités pour les applications mentionnées ci-dessus ainsi
-            que Redacteur.com.
-            <br />
-            Développement de gems, utilisées par l'ensemble des applications de
-            l'entreprise, pour réduire le boilerplate.
-
-        +timelineItem(
-          'Lead developer',
-          '1Year1Book SARL',
-          'février 2013',
-          'septembre 2014'
-        )
-          p.
-            Conception, développement et design d'un réseau social privé SaaS
-            accompagné d'outils internes permettant de générer et configurer
-            une instance en fonction des exigences du client et de suivre son
-            état de santé.
-
-        +timelineItem('Freelance', null, 'juin 2012', 'février 2013')
-          p.
-            Appuyé par un graphiste, conception et développement d'applications
-            et d'outils intranet pour diverses entreprises et startups
-            parisiennes.
-      .mb-1
-        h2 Éducation
-        +timelineItem(
-          'Développeur Multimédia (Bac +3)',
-          "L'École Multimédia",
-          '2011',
-          '2014'
-        )
-        +timelineItem(
-          'Baccalauréat scientifique',
-          'Lycée Lamarck',
-          '2007',
-          '2010'
-        )
-
+      +timelineItem(
+        'Lead developer',
+        '1Year1Book',
+        'Paris',
+        '2013',
+        '2014'
+      )
+        p.
+          Starting from scratch, development and design of the new
+          version of a SaaS social network with a handfull of tools allowing
+          the sales to easily generate and configure an instance tailored to
+          the client needs and check it's health.
+      +timelineItem('Freelance', null, 'Paris', '2012', '2013')
+        p.
+          Along side a designer, development of applications and tools for a
+          few Parisian companies and statups.
+    section
+      h2 Diplomas
+      +timelineItem('Multimedia Developer (Licence)', "L'École Multimédia", 'Paris', '2011', '2014')
+      +timelineItem('Scientific Baccalaureate', 'Lycée Lamarck', 'Albert', '2007', '2010')
     footer
       p
-        | Consultez le code source de ce document : 
+        | Made with ReLaXed, check out the source code : 
         a(href="https://github.com/rubyistdotjs/resume")
           | github.com/rubyistdotjs/resume
 
-  .w-one-third
-    .mugshot
-      img(src='images/mugshot.jpg')
-    .mb-1
+  aside.col-2
+    section
       h2 Contact
       ul.icon-list
-        +iconListItem('place')
-          | Montpellier, Hérault, France
-        +iconListItem('phone_android')
+        +iconListItem('map-pin')
+          | Montpellier, France
+        +iconListItem('smartphone')
           a(href="tel:+33600000000") +33 6 00 00 00 00
         +iconListItem('mail')
-          a(href="mailto:anon@romainguilloteau.com")
-            | anon@romainguilloteau.com
-        +iconListItem('skype', 'brand')
-          a(href="skype:anon?add") @Anon
-        +iconListItem('discord', 'brand')
-          | @Anon#1234
-    .mb-1
-      h2 Langues
-      ul.language-list
-        +languageListItem('fr', 'Français', 'Langue maternelle')
-        +languageListItem('uk', 'Anglais', 'Courant')
-    .mb-1
-      h2 Compétences
-      +skillList('Ruby on Rails', 'JavaScript', 'Node.js', 'React', 'Vue.js')
-      +skillList('PostgreSQL', 'MySQL', 'MongoDB', 'Redis')
-      +skillList('Stripe', 'Braintree', 'PayPal REST API')
-      +skillList('AWS', 'Firebase', 'Heroku', 'Capistrano')
-    div
-      h2 Liens
+          a(href="mailto:hello@romainguilloteau.dev")
+            | hello@romainguilloteau.dev
+    section
+      h2 Links
       ul.icon-list
         +iconListItem('link')
-          a(href="https://www.romainguilloteau.com/") romainguilloteau.com
-        +iconListItem('github', 'brand')
-          a(href="https://github.com/rubyistdotjs") github.com/rubyistdotjs
-        +iconListItem('gitlab', 'brand')
-          a(href="https://gitlab.com/rubyistdotjs") gitlab.com/rubyistdotjs
-        +iconListItem('linkedin', 'brand')
+          a(href="https://www.romainguilloteau.dev/") romainguilloteau.dev
+        +iconListItem('linkedin')
           a(href="https://www.linkedin.com/in/romainguilloteau/")
             | linkedin.com/in/romainguilloteau/
-    
+        +iconListItem('github')
+          a(href="https://github.com/rubyistdotjs") github.com/rubyistdotjs
+    section
+      h2 Languages
+      ul.language-list
+        +languageListItem('fr', 'French', 'Native')
+        +languageListItem('uk', 'English', 'Fluent')
+    section
+      h2 Tech
+      +skillList('JavaScript', 'TypeScript', 'Node.js', 'React', 'Vue.js', 'Ruby on Rails')
+      +skillList('PostgreSQL', 'MySQL', 'MongoDB', 'Redis')
+      +skillList('Stripe', 'Braintree', 'PayPal')
+      +skillList('AWS', 'Heroku', 'Netlify', 'Kafka')
+
+script feather.replace()

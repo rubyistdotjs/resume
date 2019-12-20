@@ -1,11 +1,15 @@
-mixin timelineItem(title, place, from, to)
+mixin timelineItem(title, company, location, from, to)
   .timeline-item
-    .timeline-item-heading
-      h3= title
-      em
-        | #{from} à #{to}
-        if place
-          |  - #{place}
+    h3= title
+    span
+      if to
+        | #{from} to #{to}
+      else
+        | since #{from}
+      if company
+        |  at #{company}
+      if location
+        |  (#{location})
     if block
       .timeline-item-body
         block
@@ -24,12 +28,8 @@ mixin languageListItem(countryCode, language, level)
     = language
     span= level
 
-mixin iconListItem(iconName, iconLibrary)
+mixin iconListItem(iconName)
   li.icon-list-item
-    if iconLibrary === 'brand'
-      - iconClass = `fab fa-${iconName} fa-fw`;
-      span(class=iconClass)
-    else
-      i(class="material-icons fa-fw")= iconName
+    i(data-feather=iconName)
     block
 
