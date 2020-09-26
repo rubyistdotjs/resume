@@ -112,7 +112,7 @@ h3 {
   align-items: start;
 }
 
-.header-title > span {
+.header-title>span {
   color: var(--grey);
   font-size: 2.15rem;
   font-weight: 800;
@@ -136,7 +136,7 @@ h3 {
 /* Timeline ----------------------------------------------------------------- */
 
 .timeline-item:not(:last-child) {
-  margin-bottom: calc(var(--gutter-size) * 0.85);
+  margin-bottom: calc(var(--gutter-size) * 0.55);
 }
 
 .timeline-item span {
@@ -167,7 +167,7 @@ h3 {
   margin-bottom: 0;
 }
 
-.icon-list-item > svg {
+.icon-list-item>svg {
   color: var(--grey-dark);
   width: var(--text-font-size);
   margin-right: 0.4rem;
