@@ -1,7 +1,7 @@
 {
   "name": "resume",
   "version": "1.0.0",
-  "author": "Romain GUILLOTEAU (https://www.romainguilloteau.dev/)",
+  "author": "Romain GUILLOTEAU (https://romainguilloteau.dev/)",
   "repository": "https://github.com/rubyistdotjs/resume",
   "license": "ISC",
   "scripts": {
@@ -9,6 +9,6 @@
     "watch": "$(npm bin)/relaxed resume.pug"
   },
   "dependencies": {
-    "relaxedjs": "^0.2.4"
+    "relaxedjs": "git+https://github.com/RelaxedJS/ReLaXed.git"
   }
 }

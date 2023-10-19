@@ -1,35 +1,50 @@
-mixin timelineItem(title, company, location, from, to)
-  .timeline-item
-    h3= title
-    span
-      if to
-        | #{from} to #{to}
+mixin timeline(entries)
+  each e in entries
+    .timeline-item
+      .timeline-item-image
+        img(src=`./images/${e.company.toLowerCase()}.webp` alt=`${e.company}'s logo`)
+      .timeline-item-content
+        .timeline-item-header
+          h3= e.company
+          span= e.title
+          span
+            if e.to
+              | From #{e.from} to #{e.to}
+            else
+              | Since #{e.from}
+            if e.location
+              |  in #{e.location}
+        .timeline-item-body
+          p= e.description
+        .timeline-item-footer
+          a(
+            href=e.url
+            title=`Visit ${e.company}'s website`
+          )
+            span(data-feather='link')
+            = new URL(e.url).hostname.replace('www.', '')
+
+mixin iconList(entries)
+  each e in entries
+    li.icon-list-item
+      span(data-feather=e.icon)
+      if e.href
+        a(href=e.href)= e.text
       else
-        | since #{from}
-      if company
-        |  at #{company}
-      if location
-        |  (#{location})
-    if block
-      .timeline-item-body
-        block
+        = e.text
 
-mixin skillList(...skills)
-  ul.skill-list
-    each skill in skills
-      li= skill
+mixin languageList(languages)
+  ul.language-list
+    each l in languages
+      li
+        .language-list-name
+          img(src=`./images/${l.name.toLowerCase()}.webp`)
+          = l.name
+        span.language-list-proficiency= l.proficiency
 
-mixin languageListItem(countryCode, language, level)
-  - imagePath = `./images/flag-${countryCode}.svg`;
-
-  li.language-list-item
-    .language-list-item-flag
-      img(src=imagePath)
-    = language
-    span= level
-
-mixin iconListItem(iconName)
-  li.icon-list-item
-    i(data-feather=iconName)
-    block
-
+mixin educationList(entries)
+  ul.education-list
+    each e in entries
+      li
+        = e.diploma
+        span= e.details

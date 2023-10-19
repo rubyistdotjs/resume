@@ -1,12 +1,12 @@
 # Resume / Curriculum vitæ
 
-<img src="https://i.imgur.com/1tUGcCP.jpg" alt="Preview of the resume" height="420" />
+<img src="https://i.imgur.com/0nTMh8A.png" alt="Preview of the resume" height="420" />
 
 [**Download the PDF**](https://github.com/rubyistdotjs/resume/raw/master/resume.pdf)
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) (12.x recommended)
+- [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
 
 ## Getting started
@@ -28,8 +28,8 @@ Then you can use the following commands:
 
 - [ReLaXed](https://github.com/RelaxedJS/ReLaXed)
 - [Feather icons](https://feathericons.com/)
-- [Countrys Flags](https://www.flaticon.com/packs/countrys-flags) designed by [Freepik](https://www.freepik.com/)
-- [Public Sans](https://fonts.google.com/specimen/Public+Sans) (via Google Fonts)
+- [Countrys Flags](https://www.flaticon.com/packs/flags-collection-4) by [Freepik](https://www.freepik.com/)
+- [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) (via Google Fonts)
 
 ## License
 

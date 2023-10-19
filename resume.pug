@@ -1,103 +1,118 @@
 include mixins.pug
 
 link(rel="stylesheet" href="./resume.css")
-link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Public+Sans:400,500,600,700,800,900&display=swap")
 script(src="https://unpkg.com/feather-icons")
 
 .grid
-  .header-title.col-1
-    h1 Romain Guilloteau
-    span Senior Full Stack Developer
-  .header-mugshot.col-2
-    img(src='images/mugshot.jpg')
-
-  main.col-1
+  header
+    h1
+      | Romain Guilloteau
+      span Senior Full Stack Engineer
+  main
     section
-      h2 Experience
-      +timelineItem(
-        'Software Engineer',
-        'Swile',
-        'Montpellier',
-        '2018'
-      )
-        p.
-          First, responsible for setting up Big Data tools and strategies while
-          developing new features for the food ordering app (React and Ruby).
-          Then architect the shift to Node.js and create from scratch a flexible
-          invoicing and payout center. Finally create from scratch the card
-          payment identification and categorization system. Lead of the
-          Loop Team and Node.js referent.
-      +timelineItem(
-        'Lead developer & Software architect',
-        'Codeur',
-        'Annecy',
-        '2015',
-        '2018'
-      )
-        p.
-          Starting from scratch, development and design of Facture.net,
-          Graphiste.com and several small marketing app.
-          <br />
-          Maintain and develop new features for the apps cited above and for
-          another existing app : Redacteur.com.
-
-      +timelineItem(
-        'Lead developer',
-        '1Year1Book',
-        'Paris',
-        '2013',
-        '2014'
-      )
-        p.
-          Starting from scratch, development and design of the new
-          version of a SaaS social network with a handfull of tools allowing
-          the sales to easily generate and configure an instance tailored to
-          the client needs and check it's health.
-      +timelineItem('Freelance', null, 'Paris', '2012', '2013')
-        p.
-          Along side a designer, development of applications and tools for a
-          few Parisian companies and statups.
-    section
-      h2 Diplomas
-      +timelineItem('Multimedia Developer (Licence)', "L'École Multimédia", 'Paris', '2011', '2014')
-      +timelineItem('Scientific Baccalaureate', 'Lycée Lamarck', 'Albert', '2007', '2010')
+      h2 Experiences
+      +timeline([
+        {
+          company: 'BuyCo',
+          url: 'https://buyco.co/',
+          title: 'Lead Software Engineer - Backend Software Engineer',
+          location: 'Marseille (Full Remote)',
+          from: '2021',
+          description: `Originally brought in for my expertise on projects
+            architecture, Ruby on Rails and to enforce good practices, I'm now
+            the lead of a team dedicated to the public APIs and shipment
+            tracking.`
+        }, {
+          company: 'Swile',
+          url: 'https://www.swile.co/',
+          title: 'Innovation Team Leader - Software Engineer',
+          location: 'Montpellier',
+          from: '2018',
+          to: '2021',
+          description: `I worked on the food delivery platform when the company
+            was named Lunchr. When it shifted to a neobank, I moved on the
+            affiliates side and payment networks, of which I became a lead.`
+        }, {
+          company: 'Codeur',
+          url: 'https://www.codeur.com/',
+          title: 'Lead Developer and Software Architect',
+          location: 'Annecy',
+          from: '2015',
+          to: '2018',
+          description: `I built Graphiste.com (a designer job board) and
+            Facture.net (an invoicing tool) from the ground up and implemented
+            some major features and rewrites for their other websites.`
+        }, {
+          company: '1Year1Book',
+          url: 'https://www.1year1book.com/',
+          title: 'Lead developer',
+          location: 'Paris',
+          from: '2013',
+          to: '2014',
+          description: `I created from scratch the new version of their SaaS
+            social network, as-well as the front facing website and internal
+            tools used to boot and configure an instance and to monitor each of
+            them.`
+        }
+      ])
     footer
       p
-        | Made with ReLaXed, check out the source code : 
+        | Check out the source code of this resume:
+        |
         a(href="https://github.com/rubyistdotjs/resume")
           | github.com/rubyistdotjs/resume
 
-  aside.col-2
+  aside
     section
       h2 Contact
-      ul.icon-list
-        +iconListItem('map-pin')
-          | Montpellier, France
-        +iconListItem('smartphone')
-          a(href="tel:+33600000000") +33 6 00 00 00 00
-        +iconListItem('mail')
-          a(href="mailto:hello@romainguilloteau.dev")
-            | hello@romainguilloteau.dev
+      +iconList([
+        {
+          icon: 'map-pin',
+          text: 'Lille, France'
+        }, {
+          icon: 'smartphone',
+          href: 'tel:+33600000000',
+          text: '+33 6 00 00 00 00'
+        }, {
+          icon: 'mail',
+          href: 'mailto:email@email.dev',
+          text: 'email@email.dev'
+        }
+      ])
     section
       h2 Links
-      ul.icon-list
-        +iconListItem('link')
-          a(href="https://www.romainguilloteau.dev/") romainguilloteau.dev
-        +iconListItem('linkedin')
-          a(href="https://www.linkedin.com/in/romainguilloteau/")
-            | linkedin.com/in/romainguilloteau/
-        +iconListItem('github')
-          a(href="https://github.com/rubyistdotjs") github.com/rubyistdotjs
+      +iconList([
+        {
+          icon: 'link',
+          href: 'https://romainguilloteau.dev/',
+          text: 'romainguilloteau.dev'
+        }, {
+          icon: 'linkedin',
+          href: 'https://www.linkedin.com/in/romainguilloteau/',
+          text: 'linkedin.com/in/romainguilloteau'
+        }, {
+          icon: 'github',
+          href: 'https://github.com/rubyistdotjs',
+          text: 'github.com/rubyistdotjs'
+        }
+      ])
     section
       h2 Languages
-      ul.language-list
-        +languageListItem('fr', 'French', 'Native')
-        +languageListItem('uk', 'English', 'Fluent')
+      +languageList([
+        { name: 'French', proficiency: 'Native' },
+        { name: 'English', proficiency: 'Fluent' },
+        { name: 'Dutch', proficiency: 'Beginner' },
+      ])
     section
-      h2 Tech
-      +skillList('JavaScript', 'TypeScript', 'Node.js', 'React', 'Vue.js', 'Ruby on Rails')
-      +skillList('PostgreSQL', 'MySQL', 'MongoDB', 'Redis')
-      +skillList('Stripe', 'Braintree', 'PayPal')
-      +skillList('AWS', 'Heroku', 'Netlify', 'Kafka')
+      h2 Education
+      +educationList([
+        {
+          diploma: 'Multimedia Developer (license)',
+          details: "2011 - 2014 at L'Ecole Multimédia (Paris)"
+        }, {
+          diploma: 'Scientific Baccalaureate',
+          details: '2007 - 2010 at Lycée Lamarck (Albert)'
+        }
+      ])
 
 script feather.replace()

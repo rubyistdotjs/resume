@@ -1,43 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900');
+
 /* Variables ---------------------------------------------------------------- */
 
 :root {
-  --font-sans: "Public Sans";
-
-  --black: #000;
-  --grey-dark: #2a2a2a;
-  --grey: #808080;
-  --grey-light: #f0f0f0;
-
+  --font-sans: "Noto Sans";
   --text-font-size: 0.875rem;
 
-  --gutter-size: 1.5rem;
-  --mugshot-size: 6.5rem;
-}
+  --gray-950: #030712;
+  --gray-900: #111827;
+  --gray-800: #1f2937;
+  --gray-700: #374151;
+  --gray-600: #4b5563;
+  --gray-500: #6b7280;
+  --gray-400: #9ca3af;
+  --gray-300: #d1d5db;
+  --gray-200: #e5e7eb;
+  --gray-100: #f3f4f6;
+  --gray-50: #f9fafb;
 
-/* Grid --------------------------------------------------------------------- */
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  height: 100%;
-}
-
-.col-1 {
-  grid-column: 1 / 6;
-  padding: var(--gutter-size);
-  overflow: hidden;
-}
-
-.col-2 {
-  grid-column: 6 / 9;
-  padding: var(--gutter-size);
-  overflow: hidden;
+  --indigo-500: #6366f1;
 }
 
 /* Scaffolding -------------------------------------------------------------- */
 
 body {
-  color: var(--grey-dark);
+  color: var(--gray-800);
   font-size: var(--text-font-size);
   font-family: var(--font-sans);
   line-height: 1.25;
@@ -46,17 +33,31 @@ body {
   -webkit-font-smoothing: auto;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2.5rem;
+  height: 100vh;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+header {
+  grid-column: 1 / 3;
+}
+
 main {
   display: flex;
   flex-direction: column;
+  grid-column: 1;
 }
 
 aside {
-  border-left: 1px solid var(--grey-light);
+  grid-column: 2;
 }
 
 section {
-  margin-bottom: calc(var(--gutter-size) * 1.5);
+  margin-bottom: 2.5rem;
 }
 
 a {
@@ -75,84 +76,85 @@ ul {
 h1,
 h2,
 h3 {
-  color: var(--black);
+  color: var(--gray-900);
   padding: 0;
   margin: 0;
-  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
-  font-size: 2.25rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.15;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: calc(var(--gutter-size) * 0.875);
+  margin-bottom: 1.25rem;
 }
 
 h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.05rem;
+  color: var(--gray-800);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
 }
 
 /* Header ------------------------------------------------------------------- */
 
-.header-title,
-.header-mugshot {
-  border-bottom: 1px solid var(--grey-light);
-}
-
-.header-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-}
-
-.header-title>span {
-  color: var(--grey);
-  font-size: 2.15rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.header-mugshot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-mugshot img {
-  width: var(--mugshot-size);
-  height: var(--mugshot-size);
-  border: 1px solid var(--grey-light);
-  padding: 0.15rem;
-  border-radius: 999rem;
+header h1 > span {
+  display: block;
+  color: var(--indigo-500);
 }
 
 /* Timeline ----------------------------------------------------------------- */
 
-.timeline-item:not(:last-child) {
-  margin-bottom: calc(var(--gutter-size) * 0.55);
+.timeline-item {
+  display: flex;
 }
 
-.timeline-item span {
-  color: var(--grey);
-  font-size: 1rem;
-  font-weight: 500;
+.timeline-item:not(:last-child) {
+  margin: 1.75rem 0;
+}
+
+.timeline-item-header span {
+  display: block;
+  color: var(--gray-800);
+  line-height: 1.4;
+}
+
+.timeline-item-image {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1.25rem;
+}
+
+.timeline-item-image img {
+  width: 100%;
+  height: auto;
 }
 
 .timeline-item-body {
-  margin: calc(var(--gutter-size) / 5) 0 0;
+  color: var(--gray-600);
+  margin: 0.5rem 0;
 }
 
 .timeline-item-body p {
-  line-height: 1.45;
+  line-height: 1.4;
   padding: 0;
   margin: 0;
+}
+
+.timeline-item-footer a {
+  color: var(--gray-500);
+  font-size: 0.8rem;
+}
+
+.timeline-item-footer a svg {
+  width: 0.7rem;
+  margin-right: 0.35rem;
+  vertical-align: middle;
 }
 
 /* Icon list ---------------------------------------------------------------- */
@@ -160,71 +162,64 @@ h3 {
 .icon-list-item {
   display: flex;
   align-items: center;
+}
+
+.icon-list-item:not(:last-child) {
   margin-bottom: 0.35rem;
 }
 
-.icon-list-item:last-child {
-  margin-bottom: 0;
-}
-
-.icon-list-item>svg {
-  color: var(--grey-dark);
+.icon-list-item > svg {
+  color: var(--gray-500);
   width: var(--text-font-size);
   margin-right: 0.4rem;
 }
 
-/* Skill list --------------------------------------------------------------- */
-
-.skill-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 0;
-  margin: 0 0 0.5rem;
-  list-style: none;
-}
-
-.skill-list:last-child {
-  margin: 0;
-}
-
-.skill-list li {
-  margin-bottom: 0.35rem;
-}
-
 /* Language list ------------------------------------------------------------ */
 
-.language-list-item {
-  display: flex;
-  align-items: center;
+.language-list > li {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.language-list > li:not(:last-child) {
   margin-bottom: 0.6rem;
 }
 
-.language-list-item:last-child {
-  margin-bottom: 0rem;
+.language-list-name {
+  display: flex;
+  align-items: center;
 }
 
-.language-list-item span:before {
-  content: "-";
-  margin: 0.2rem;
-}
-
-.language-list-item span {
-  color: var(--grey);
-}
-
-.language-list-item-flag {
+.language-list-name > img {
   width: var(--text-font-size);
   height: var(--text-font-size);
   margin-right: 0.4rem;
 }
 
+.language-list-proficiency {
+  color: var(--gray-600);
+}
+
+/* Education list ----------------------------------------------------------- */
+
+.education-list > li {
+  line-height: 1.35;
+}
+
+.education-list > li:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+.education-list > li > span {
+  display: block;
+  color: var(--gray-600);
+  font-size: 0.8rem;
+}
+
 /* Footer ------------------------------------------------------------------- */
 
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-  color: var(--grey);
+  color: var(--gray-500);
   font-size: 0.7rem;
+  margin-top: 1.25rem;
 }
