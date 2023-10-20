@@ -4,7 +4,9 @@
 
 :root {
   --font-sans: "Noto Sans";
-  --text-font-size: 0.875rem;
+  --font-size: 0.875rem;
+  --font-size-sm: 0.8rem;
+  --font-size-xs: 0.75rem;
 
   --gray-950: #030712;
   --gray-900: #111827;
@@ -25,7 +27,7 @@
 
 body {
   color: var(--gray-800);
-  font-size: var(--text-font-size);
+  font-size: var(--font-size);
   font-family: var(--font-sans);
   line-height: 1.25;
   padding: 0;
@@ -124,6 +126,17 @@ header h1 > span {
   line-height: 1.4;
 }
 
+.timeline-item-header small:before {
+  content: '·';
+  margin: 0 0.25rem;
+  vertical-align: middle;
+}
+
+.timeline-item-header small {
+  color: var(--gray-500);
+  font-size: var(--font-size-sm);
+}
+
 .timeline-item-image {
   width: 5rem;
   height: 5rem;
@@ -136,7 +149,7 @@ header h1 > span {
 }
 
 .timeline-item-body {
-  color: var(--gray-600);
+  color: var(--gray-700);
   margin: 0.5rem 0;
 }
 
@@ -148,7 +161,7 @@ header h1 > span {
 
 .timeline-item-footer a {
   color: var(--gray-500);
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
 }
 
 .timeline-item-footer a svg {
@@ -169,8 +182,8 @@ header h1 > span {
 }
 
 .icon-list-item > svg {
-  color: var(--gray-500);
-  width: var(--text-font-size);
+  color: var(--gray-600);
+  width: var(--font-size);
   margin-right: 0.4rem;
 }
 
@@ -191,8 +204,8 @@ header h1 > span {
 }
 
 .language-list-name > img {
-  width: var(--text-font-size);
-  height: var(--text-font-size);
+  width: var(--font-size);
+  height: var(--font-size);
   margin-right: 0.4rem;
 }
 
@@ -203,7 +216,7 @@ header h1 > span {
 /* Education list ----------------------------------------------------------- */
 
 .education-list > li {
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .education-list > li:not(:last-child) {
@@ -213,13 +226,13 @@ header h1 > span {
 .education-list > li > span {
   display: block;
   color: var(--gray-600);
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
 }
 
 /* Footer ------------------------------------------------------------------- */
 
 footer {
   color: var(--gray-500);
-  font-size: 0.7rem;
+  font-size: var(--font-size-xs);
   margin-top: 1.25rem;
 }

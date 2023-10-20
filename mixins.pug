@@ -12,8 +12,8 @@ mixin timeline(entries)
               | From #{e.from} to #{e.to}
             else
               | Since #{e.from}
-            if e.location
-              |  in #{e.location}
+            |  in #{e.location}
+            small= e.locationType
         .timeline-item-body
           p= e.description
         .timeline-item-footer

@@ -1,6 +1,6 @@
 # Resume / Curriculum vitæ
 
-<img src="https://i.imgur.com/0nTMh8A.png" alt="Preview of the resume" height="420" />
+<img src="https://i.imgur.com/SVRpLYa.png" alt="Preview of the resume" height="420" />
 
 [**Download the PDF**](https://github.com/rubyistdotjs/resume/raw/master/resume.pdf)
 
