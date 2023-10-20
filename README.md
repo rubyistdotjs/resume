@@ -28,7 +28,7 @@ Then you can use the following commands:
 
 - [ReLaXed](https://github.com/RelaxedJS/ReLaXed)
 - [Feather icons](https://feathericons.com/)
-- [Countrys Flags](https://www.flaticon.com/packs/flags-collection-4) by [Freepik](https://www.freepik.com/)
+- [Flags Collection](https://www.flaticon.com/packs/flags-collection-4) by [Freepik](https://www.freepik.com/)
 - [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) (via Google Fonts)
 
 ## License
