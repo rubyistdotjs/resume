@@ -59,7 +59,7 @@ aside {
 }
 
 section {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 a {
@@ -117,7 +117,7 @@ header h1 > span {
 }
 
 .timeline-item:not(:last-child) {
-  margin: 1.75rem 0;
+  margin: 1.725rem 0;
 }
 
 .timeline-item-header span {
@@ -178,7 +178,7 @@ header h1 > span {
 }
 
 .icon-list-item:not(:last-child) {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 .icon-list-item > svg {
@@ -195,7 +195,7 @@ header h1 > span {
 }
 
 .language-list > li:not(:last-child) {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .language-list-name {
@@ -213,17 +213,17 @@ header h1 > span {
   color: var(--gray-600);
 }
 
-/* Education list ----------------------------------------------------------- */
+/* Detail list -------------------------------------------------------------- */
 
-.education-list > li {
+.detail-list > li {
   line-height: 1.4;
 }
 
-.education-list > li:not(:last-child) {
-  margin-bottom: 0.8rem;
+.detail-list > li:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
-.education-list > li > span {
+.detail-list > li > span {
   display: block;
   color: var(--gray-600);
   font-size: var(--font-size-sm);
@@ -234,5 +234,5 @@ header h1 > span {
 footer {
   color: var(--gray-500);
   font-size: var(--font-size-xs);
-  margin-top: 1.25rem;
+  margin-top: 1.7rem;
 }

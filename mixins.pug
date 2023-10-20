@@ -42,8 +42,8 @@ mixin languageList(languages)
           = l.name
         span.language-list-proficiency= l.proficiency
 
-mixin educationList(entries)
-  ul.education-list
+mixin detailList(entries)
+  ul.detail-list
     each e in entries
       li
         = e.diploma

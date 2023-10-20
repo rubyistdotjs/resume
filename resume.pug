@@ -109,13 +109,27 @@ script(src="https://unpkg.com/feather-icons")
       ])
     section
       h2 Education
-      +educationList([
+      +detailList([
         {
           diploma: 'Multimedia Developer (license)',
           details: "2011 - 2014 at L'Ecole Multimédia in Paris"
         }, {
           diploma: 'Scientific Baccalaureate',
           details: '2007 - 2010 at Lycée Lamarck in Albert'
+        }
+      ])
+    section
+      h2 Licenses
+      +detailList([
+        {
+          diploma: 'Private Pilot License (PPL/A)',
+          details: "2023 at Aéroclub de l'Hérault"
+        }, {
+          diploma: 'Motorcycle license',
+          details: 'A2 in 2017 - A in 2020'
+        }, {
+          diploma: 'Driver license',
+          details: '2011'
         }
       ])
 
